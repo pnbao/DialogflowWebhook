@@ -19,8 +19,8 @@ def webhook():
         baseurl = "https://hooks.zapier.com/hooks/catch/2399943/wp99ov/"
         r = requests.post(baseurl, data=json.dumps(req))
     else:
-        return req
-    return r.text, req
+        return "Nothing"
+    return r.text
 
 
 if __name__ == '__main__':
