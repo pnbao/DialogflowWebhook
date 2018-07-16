@@ -12,7 +12,7 @@ app = Flask(__name__)
 @app.route('/webhook', methods=['POST'])
 def webhook():
     req = request.get_json(silent=True, force=True)
-    if req.get("queryResult").get("action") == "Feedback":
+    if req.get("result").get("action") == "Feedback":
         baseurl = "https://hooks.zapier.com/hooks/catch/2399943/wpr974/"
         r = requests.post(baseurl, data=json.dumps(req))
     elif req.get("queryResult").get("action") == "RegisterOnline":
