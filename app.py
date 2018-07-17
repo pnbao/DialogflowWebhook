@@ -42,22 +42,9 @@ def webhook():
                 "text": message
             }
         },
-        "contextOut": [
-            {
-                "name": "context name",
-                "lifespan": 5,
-                "parameters": {
-                    "param": "param value"
-                }
-            }
-        ],
+        "contextOut": [],
         "source": "example.com",
-        "followupEvent": {
-            "name": "event name",
-            "parameters": {
-                "param": "param value"
-            }
-        }
+        "followupEvent": {}
     })
     if req.get("result").get("action") == "Feedback":
         baseurl = "https://hooks.zapier.com/hooks/catch/2399943/wpr974/"
