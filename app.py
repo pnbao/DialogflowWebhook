@@ -47,10 +47,10 @@ def webhook():
         "followupEvent": {}
     })
     if req.get("result").get("action") == "Feedback":
-        baseurl = "https://hooks.zapier.com/hooks/catch/2399943/wpr974/"
+        baseurl = "https://hooks.zapier.com/hooks/catch/3544928/wvzqh2/"
         r = requests.post(baseurl, data=json.dumps(req))
     elif req.get("result").get("action") == "RegisterOnline":
-        baseurl = "https://hooks.zapier.com/hooks/catch/2399943/wp99ov/"
+        baseurl = "https://hooks.zapier.com/hooks/catch/3544928/wvk6pa/"
         r = requests.post(baseurl, data=json.dumps(req))
     return responseMessage
 
